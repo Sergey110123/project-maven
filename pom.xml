@@ -82,13 +82,14 @@
                 <version>3.6.0</version>
                 <configuration>
                     <outputDirectory>
-                        ${project.build.directory}/lib/
+                        ${project.build.directory}/dependency/
                     </outputDirectory>
+                    <includeScope>compile</includeScope>
                 </configuration>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
-                        <phase>package</phase>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>copy-dependencies</goal>
                         </goals>
